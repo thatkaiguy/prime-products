@@ -66,6 +66,3 @@ class PrimesTable
     content.to_s.rjust(col_width)
   end
 end
-
-foo = PrimesTable.new(9)
-puts foo
