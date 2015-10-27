@@ -1,17 +1,11 @@
 class PrimesTable
-  FIRST_TEN_PRIMES = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+  def self.get_primes(number_of_primes)
+    result = []
 
-  def self.get_primes(number_of_primes, calculated_primes = FIRST_TEN_PRIMES)
-    result = calculated_primes
-
-    if number_of_primes <= result.size
-      result = result.take(number_of_primes)
-    else
-      candidate_number = result.last + 1
-      while result.size < number_of_primes
-        result << candidate_number if is_prime?(candidate_number)
-        candidate_number += 1
-      end
+    candidate_number = 2
+    while result.size < number_of_primes
+      result << candidate_number if is_prime?(candidate_number)
+      candidate_number += 1
     end
 
     result
@@ -25,6 +19,8 @@ class PrimesTable
     true
   end
 
+  private_class_method :is_prime?
+
   attr_reader :primes
 
   def initialize(number_of_primes = 10)
@@ -37,7 +33,7 @@ class PrimesTable
   end
 
   def to_s
-    result_str = top_row + "\n"
+    result_str = header + "\n"
     self.primes.each do |row_prime|
       result_str << format_column(row_prime)
       self.primes.each do |col_prime|
@@ -53,7 +49,7 @@ class PrimesTable
 
   attr_accessor :col_width
 
-  def top_row
+  def header
     output = " " * col_width
     self.primes.each do |prime|
       output << format_column(prime)
