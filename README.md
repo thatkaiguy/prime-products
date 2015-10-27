@@ -19,7 +19,11 @@ Example 1: Printing the multiplication table of the first 10 prime numbers.
 
 Expected output:
 
+![10](https://raw.github.com/thatkaiguy/prime-products/master/10.png)
+
 Example 2: Printing the multiplication table of the first N prime numbers. N = 13 in this case.
 `ruby prime_products.rb 13`
 
 Expected output:
+
+![13](https://raw.github.com/thatkaiguy/prime-products/master/13.png)
