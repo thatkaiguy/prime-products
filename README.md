@@ -4,10 +4,8 @@ This program will print out a multiplication table of the first n prime numbers.
 
 ### Time Complexity
 
-- `::get_primes` - scales on the order of O(n * sqrt(n))
-- `#to_s` - scales on the order of O(n^2)
-
-n is the number of prime numbers.
+- `::get_primes` - scales on the order of O(n * sqrt(n)) where n is the largest prime number in the set
+- `#to_s` - scales on the order of O(n^2) where n is the total number of prime numbers
 
 ### Usage
 
