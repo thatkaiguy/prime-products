@@ -14,14 +14,20 @@ n is the number of prime numbers.
 Please clone this repository, run `bundle` and use the following commands from the command line.
 Tests may be run using `rspec`.
 
-Example 1: Printing the multiplication table of the first 10 prime numbers.
+#### Example 1:
+
+Printing the multiplication table of the first 10 prime numbers.
+
 `ruby prime_products.rb`
 
 Expected output:
 
 ![10](https://raw.github.com/thatkaiguy/prime-products/master/10.png)
 
-Example 2: Printing the multiplication table of the first N prime numbers. N = 13 in this case.
+#### Example 2:
+
+Printing the multiplication table of the first N prime numbers. N = 13 in this case.
+
 `ruby prime_products.rb 13`
 
 Expected output:
